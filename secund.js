@@ -17,7 +17,7 @@ let diceRandom2=0;
 let sorce=[0,0];
 let max=localStorage.getItem('max');
 btnRoll.removeAttribute("disabled", false);
-
+btnHold.removeAttribute("disabled", false);
 
 btnRoll.addEventListener("click",(e)=>
 {
@@ -95,6 +95,7 @@ const max_scoure=max;
         // Removing the active player status from the winner 
         document.querySelector('.player-' + activeplayer + '-panel').classList.remove('active');
   
+        btnHold.setAttribute("disabled", true);
   
       } else {
         
