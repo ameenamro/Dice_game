@@ -1,4 +1,3 @@
-
          
      let max_scoure=0;
     const number_win=document.querySelector("#winningScore");
@@ -6,9 +5,14 @@
     number_win.addEventListener("input", (e) => {
         e.preventDefault();
       max_scoure= e.target.value;
-      start_game.removeAttribute("disabled", false);
 
-      if (max_scoure == 0) {
+      if (max_scoure>2)
+      {
+        start_game.removeAttribute("disabled", false);  
+      }
+      
+
+      if (max_scoure == 0 ) {
         start_game.setAttribute("disabled", true);
         
       }

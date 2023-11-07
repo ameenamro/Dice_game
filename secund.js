@@ -16,6 +16,7 @@ let diceRandom1=0;
 let diceRandom2=0;
 let sorce=[0,0];
 let max=localStorage.getItem('max');
+btnRoll.removeAttribute("disabled", false);
 
 
 btnRoll.addEventListener("click",(e)=>
@@ -56,7 +57,8 @@ if(diceRandom1 == 6 && diceRandom2 ==6 )
 }
 else
 {
-   
+    
+
     let allRandom=diceRandom1+diceRandom2;
 
     courentScore+=allRandom;
@@ -80,7 +82,8 @@ const max_scoure=max;
     // Checking if the player won the game
     if (sorce[activeplayer] >= max_scoure) {
 
-        
+      btnRoll.setAttribute("disabled", true);
+
         document.querySelector('#name-' + activeplayer).textContent = 'Winner!';
   
         // Hiding the dices
