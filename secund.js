@@ -18,7 +18,6 @@ let sorce=[0,0];
 let max=localStorage.getItem('max');
 btnRoll.removeAttribute("disabled", false);
 btnHold.removeAttribute("disabled", false);
-
 btnRoll.addEventListener("click",(e)=>
 {
 dice1.classList.remove("hidden");
@@ -74,7 +73,7 @@ else
 
 btnHold.addEventListener("click",()=>
 {
-
+document.querySelector(`#current-${activeplayer}`).textContent=0;
 sorce[activeplayer]+=courentScore;
 document.querySelector(`#score-${activeplayer}`).textContent=sorce[activeplayer];
 const max_scoure=max;
