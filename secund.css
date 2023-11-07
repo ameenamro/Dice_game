@@ -188,6 +188,8 @@ color: #555;
      width: 350px; 
      border-radius: 15px;
      height: 800px;
+     transition: 0.3s;
+
 }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
 
